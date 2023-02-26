@@ -858,12 +858,13 @@ c1,c2 = st.columns([1,1])
 # Widgets: checkbox (you can replace st.xx with st.sidebar.xx)
 if c1.checkbox("Show Dataframe strength"):
     st.subheader("This is strength reviews dataset:")
-    df_strength = pd.read_csv("csvfiles/kwTrek1200wk.csv")
+    df_strength = pd.read_csv("Dataframes/df_strength.csv")
     st.dataframe(data=df_strength)
     #st.table(data=df_strength)
      
 elif c1.checkbox("Show Dataframe weakness"):
     st.subheader("This is weakness reviews dataset:")
+    df_weakness = pd.read_csv("Dataframes/df_weakness.csv")
     st.dataframe(data=df_weakness)
     #st.table(data=df_weakness)  
 
