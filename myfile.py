@@ -849,8 +849,6 @@ if option == 'Trek1200':
             df = pd.read_csv("csvfiles/kwTrek1200wk.csv")
             st.dataframe(df)
   
-st.write("To see repository in GitHub [link](https://github.com/ozkayaalp/Analyzing-the-reviews-of-Trek-road-bikes-with-NLP-techniques.git)")
-
 # Setting up columns
 c1,c2 = st.columns([1,1])
 
