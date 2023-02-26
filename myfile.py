@@ -847,7 +847,9 @@ if option == 'Trek1200':
             st.subheader('Top Keywords about Trek1200 Weakness')
             df = pd.read_csv("csvfiles/kwTrek1200wk.csv")
             st.dataframe(df)
-            
+  
+st.write("To see repository in GitHub [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
+
         
 
     
