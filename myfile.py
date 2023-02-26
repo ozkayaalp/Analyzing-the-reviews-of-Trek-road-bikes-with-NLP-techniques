@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
+
 st.title("Analyzing the reviews of Trek road bikes with NLP techniques")
 st.header("Finding the best Trek!")
 
@@ -848,9 +849,26 @@ if option == 'Trek1200':
             df = pd.read_csv("csvfiles/kwTrek1200wk.csv")
             st.dataframe(df)
   
-st.write("To see repository in GitHub [link](https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py)")
+st.write("To see repository in GitHub [link](https://github.com/ozkayaalp/Analyzing-the-reviews-of-Trek-road-bikes-with-NLP-techniques.git)")
 
-        
+# Setting up columns
+c1,c2 = st.columns([1,1])
+
+
+# Widgets: checkbox (you can replace st.xx with st.sidebar.xx)
+if c1.checkbox("Show Dataframe strength"):
+    st.subheader("This is strength reviews dataset:")
+    df_strength = pd.read_csv("csvfiles/kwTrek1200wk.csv")
+    st.dataframe(data=df_strength)
+    #st.table(data=df_strength)
+     
+elif c1.checkbox("Show Dataframe weakness"):
+    st.subheader("This is weakness reviews dataset:")
+    st.dataframe(data=df_weakness)
+    #st.table(data=df_weakness)  
+
+link = '[To see the code in GitHub ](https://github.com/ozkayaalp/Analyzing-the-reviews-of-Trek-road-bikes-with-NLP-techniques)'
+c2.markdown(link, unsafe_allow_html=True)        
 
     
     
