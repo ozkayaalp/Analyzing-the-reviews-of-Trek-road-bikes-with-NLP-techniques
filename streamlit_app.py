@@ -39,6 +39,7 @@ def get_all_files_bike(filenames, bike_name_prefix):
     return [p for p in filenames if p.stem.startswith(bike_name_prefix)]
 
 # get all csv files based on option postfix st or wk
+@st.cache_resource
 def get_csv_file_by_option(csv_files_per_bike, option_sw):
     for csv_file in csv_files_per_bike:
         if option_sw == 'Weakness' and csv_file.stem.endswith('wk'):
@@ -48,13 +49,14 @@ def get_csv_file_by_option(csv_files_per_bike, option_sw):
     return None
 
 # get all png files based on analysis and option
+@st.cache_resource
 def get_png_file_by_analysis_and_option(png_files_per_bike, analysis, option_sw):
     for png_file in png_files_per_bike:
         if analysis == "Sentiment" and 'sent' in png_file.stem.lower():
             pass
         elif analysis == "Emotion" and 'pie' in png_file.stem.lower():
             pass
-        elif analysis == "Keyword" and 'keyword' in png_file.stem.lower() or 'wordcloud' in png_file.stem.lower():
+        elif analysis == "Keyword" and ('keyword' in png_file.stem.lower() or 'wordcloud' in png_file.stem.lower()):
             pass
         else:
             continue
