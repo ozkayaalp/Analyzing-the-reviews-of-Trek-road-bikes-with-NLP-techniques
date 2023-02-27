@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 
-
 st.title("Analyzing the reviews of Trek road bikes with NLP techniques")
 st.header("Finding the best Trek!")
 
@@ -26,11 +25,11 @@ if option == 'Trek1500':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1500_Keyword_st.png")
             st.image(image, caption='Trek1500')
-            
+
             st.subheader('Top Keywords about Trek1500 Strength')
             df = pd.read_csv("csvfiles/kwTrek1500.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -45,12 +44,12 @@ if option == 'Trek1500':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1500_wordcloud_wk.png")
             st.image(image, caption='Trek1500')
-            
+
             st.subheader('Top Keywords about Trek1500 Weakness')
             df = pd.read_csv("csvfiles/kwTrek1500wk.csv")
             st.dataframe(df)
-                        
-            
+
+
 if option == 'Pilot_5_0':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -67,7 +66,7 @@ if option == 'Pilot_5_0':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Pilot5.0_Keyword_st.png")
             st.image(image, caption='Pilot5.0')
-            
+
             st.subheader('Top Keywords about Pilot5.0 Strength')
             df = pd.read_csv("csvfiles/kwTrekPilot5.0.csv")
             st.dataframe(df)
@@ -85,11 +84,11 @@ if option == 'Pilot_5_0':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Pilot5.0_wordcloud_wk.png")
             st.image(image, caption='Pilot5.0')
-                        
+
             st.subheader('Top Keywords about Pilot5.0 Weakness')
             df = pd.read_csv("csvfiles/kwPilot5.0wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Madone_5_2':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -106,11 +105,11 @@ if option == 'Madone_5_2':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone_5_2_Keyword_st.png")
             st.image(image, caption='Madone5.2')
-            
+
             st.subheader('Top Keywords about Madone5-2 Strength')
             df = pd.read_csv("csvfiles/kwMadone_5_2.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -125,7 +124,7 @@ if option == 'Madone_5_2':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone_5_2_wordcloud_wk.png")
             st.image(image, caption='Madone5.2')
-            
+
             st.subheader('Top Keywords about Madone5-2 Weakness')
             df = pd.read_csv("csvfiles/kwMadone_5_2wk.csv")
             st.dataframe(df)
@@ -146,11 +145,11 @@ if option == 'Trek2100':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek2100_Keyword_st.png")
             st.image(image, caption='Trek2100')
-            
+
             st.subheader('Top Keywords about Trek2100 Strength')
             df = pd.read_csv("csvfiles/kwTrek2100.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -165,10 +164,10 @@ if option == 'Trek2100':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek2100_wordcloud_wk.png")
             st.image(image, caption='Trek2100')
-            
+
             st.subheader('Top Keywords about Trek2100 Weakness')
             df = pd.read_csv("csvfiles/kwTrek2100wk.csv")
-            st.dataframe(df)   
+            st.dataframe(df)
 
 if option == 'Trek1_5':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
@@ -186,11 +185,11 @@ if option == 'Trek1_5':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1_5_Keyword_st.png")
             st.image(image, caption='Trek1_5')
-            
+
             st.subheader('Top Keywords about Trek1-5 Strength')
             df = pd.read_csv("csvfiles/kwTrek1_5.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -205,11 +204,11 @@ if option == 'Trek1_5':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1_5_wordcloud_wk.png")
             st.image(image, caption='Trek1_5')
-            
+
             st.subheader('Top Keywords about Trek1-5 Weakness')
             df = pd.read_csv("csvfiles/kwTrek1_5wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Emonda':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -226,11 +225,11 @@ if option == 'Emonda':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Emonda_Keyword_st.png")
             st.image(image, caption='Emonda')
-            
+
             st.subheader('Top Keywords about Emonda Strength')
             df = pd.read_csv("csvfiles/kwEmonda.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -245,7 +244,7 @@ if option == 'Emonda':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Emonda_wordcloud_wk.png")
             st.image(image, caption='Emonda')
-            
+
             st.subheader('Top Keywords about Emonda Weakness')
             df = pd.read_csv("csvfiles/kwEmondawk.csv")
             st.dataframe(df)
@@ -266,11 +265,11 @@ if option == 'Pilot2_1':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Pilot2_1_Keyword_st.png")
             st.image(image, caption='Pilot2_1')
-            
+
             st.subheader('Top Keywords about Pilot2_1 Strength')
             df = pd.read_csv("csvfiles/kwPilot2_1.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -285,11 +284,11 @@ if option == 'Pilot2_1':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Pilot2_1_wordcloud_wk.png")
             st.image(image, caption='Pilot2_1')
-            
+
             st.subheader('Top Keywords about Pilot2_1 Weakness')
             df = pd.read_csv("csvfiles/kwPilot2_1wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Trek2300':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -306,11 +305,11 @@ if option == 'Trek2300':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek2300_Keyword_st.png")
             st.image(image, caption='Trek2300')
-            
+
             st.subheader('Top Keywords about Trek2300 Strength')
             df = pd.read_csv("csvfiles/kwTrek2300.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -325,11 +324,11 @@ if option == 'Trek2300':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek2300_wordcloud_wk.png")
             st.image(image, caption='Trek2300')
-            
+
             st.subheader('Top Keywords about Trek2300 Weakness')
             df = pd.read_csv("csvfiles/kwTrek2300wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Trek1000':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -346,11 +345,11 @@ if option == 'Trek1000':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1000_Keyword_st.png")
             st.image(image, caption='Trek1000')
-            
+
             st.subheader('Top Keywords about Trek1000 Strength')
             df = pd.read_csv("csvfiles/kwTrek1000.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -365,11 +364,11 @@ if option == 'Trek1000':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1000_wordcloud_wk.png")
             st.image(image, caption='Trek1000')
-            
+
             st.subheader('Top Keywords about Trek1000 Weakness')
             df = pd.read_csv("csvfiles/kwTrek1000wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Trek2200':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -386,11 +385,11 @@ if option == 'Trek2200':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek2200_Keyword_st.png")
             st.image(image, caption='Trek2200')
-            
+
             st.subheader('Top Keywords about Trek2200 Strength')
             df = pd.read_csv("csvfiles/kwTrek2200.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -405,11 +404,11 @@ if option == 'Trek2200':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek2200_wordcloud_wk.png")
             st.image(image, caption='Trek2200')
-            
+
             st.subheader('Top Keywords about Trek2200 Weakness')
             df = pd.read_csv("csvfiles/kwTrek2200wk.csv")
             st.dataframe(df)
-            
+
 if option == 'MadoneSL5_9':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -426,11 +425,11 @@ if option == 'MadoneSL5_9':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/MadoneSL5_9_Keyword_st.png")
             st.image(image, caption='MadoneSL5-9')
-            
+
             st.subheader('Top Keywords about MadoneSL5_9 Strength')
             df = pd.read_csv("csvfiles/kwMadoneSL5_9.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -445,11 +444,11 @@ if option == 'MadoneSL5_9':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/MadoneSL5_9_wordcloud_wk.png")
             st.image(image, caption='MadoneSL5_9')
-            
+
             st.subheader('Top Keywords about MadoneSL5_9 Weakness')
             df = pd.read_csv("csvfiles/kwMadoneSL5_9wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Madone6_9':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -466,11 +465,11 @@ if option == 'Madone6_9':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone6_9_Keyword_st.png")
             st.image(image, caption='Madone6-9')
-            
+
             st.subheader('Top Keywords about Madone6-9 Strength')
             df = pd.read_csv("csvfiles/kwMadone6_9.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -485,11 +484,11 @@ if option == 'Madone6_9':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone6_9_wordcloud_wk.png")
             st.image(image, caption='Madone6_9')
-            
+
             st.subheader('Top Keywords about Madone6-9 Weakness')
             df = pd.read_csv("csvfiles/kwMadone6_9wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Trek1_2':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -506,11 +505,11 @@ if option == 'Trek1_2':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1_2_Keyword_st.png")
             st.image(image, caption='Trek1-2')
-            
+
             st.subheader('Top Keywords about Trek1_2 Strength')
             df = pd.read_csv("csvfiles/kwTrek1_2.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -525,11 +524,11 @@ if option == 'Trek1_2':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1_2_wordcloud_wk.png")
             st.image(image, caption='Trek1_2')
-            
+
             st.subheader('Top Keywords about Trek1_2 Weakness')
             df = pd.read_csv("csvfiles/kwTrek1_2wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Madone5_9':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -546,11 +545,11 @@ if option == 'Madone5_9':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone5_9_Keyword_st.png")
             st.image(image, caption='Madone5_9')
-            
+
             st.subheader('Top Keywords about Madone5_9 Strength')
             df = pd.read_csv("csvfiles/kwMadone5_9.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -565,11 +564,11 @@ if option == 'Madone5_9':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone5_9_wordcloud_wk.png")
             st.image(image, caption='Madone5_9')
-            
+
             st.subheader('Top Keywords about Madone5_9 Weakness')
             df = pd.read_csv("csvfiles/kwMadone5_9wk.csv")
             st.dataframe(df)
-            
+
 if option == 'Superlight59':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -586,11 +585,11 @@ if option == 'Superlight59':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Superlight59_Keyword_st.png")
             st.image(image, caption='Superlight59')
-            
+
             st.subheader('Top Keywords about Superlight59 Strength')
             df = pd.read_csv("csvfiles/kwSuperlight59.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -605,11 +604,11 @@ if option == 'Superlight59':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Superlight59_wordcloud_wk.png")
             st.image(image, caption='Superlight59')
-            
+
             st.subheader('Top Keywords about Superlight59 Weakness')
             df = pd.read_csv("csvfiles/kwSuperlight59wk.csv")
-            st.dataframe(df)  
-            
+            st.dataframe(df)
+
 if option == 'Madone5_2_2008':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -626,11 +625,11 @@ if option == 'Madone5_2_2008':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone5_2_2008_Keyword_st.png")
             st.image(image, caption='Madone5_2_2008')
-            
+
             st.subheader('Top Keywords about Madone5_2_2008 Strength')
             df = pd.read_csv("csvfiles/kwMadone5_2_2008.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -645,11 +644,11 @@ if option == 'Madone5_2_2008':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone5_2_2008_wordcloud_wk.png")
             st.image(image, caption='Madone5_2_2008')
-            
+
             st.subheader('Top Keywords about Madone5_2_2008 Weakness')
             df = pd.read_csv("csvfiles/kwMadone5_2_2008wk.csv")
-            st.dataframe(df) 
-            
+            st.dataframe(df)
+
 if option == 'Madone4_5':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -666,11 +665,11 @@ if option == 'Madone4_5':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone4_5_Keyword_st.png")
             st.image(image, caption='Madone4_5')
-            
+
             st.subheader('Top Keywords about Madone4_5 Strength')
             df = pd.read_csv("csvfiles/kwMadone4_5.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -685,10 +684,10 @@ if option == 'Madone4_5':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Madone4_5_wordcloud_wk.png")
             st.image(image, caption='Madone4_5')
-            
+
             st.subheader('Top Keywords about Madone4_5 Weakness')
             df = pd.read_csv("csvfiles/kwMadone4_5wk.csv")
-            st.dataframe(df)  
+            st.dataframe(df)
 
 if option == 'Trek1800c':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
@@ -706,11 +705,11 @@ if option == 'Trek1800c':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1800c_Keyword_st.png")
             st.image(image, caption='Trek1800c')
-            
+
             st.subheader('Top Keywords about Trek1800c Strength')
             df = pd.read_csv("csvfiles/kwTrek1800c.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -725,11 +724,11 @@ if option == 'Trek1800c':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1800c_wordcloud_wk.png")
             st.image(image, caption='Trek1800c')
-            
+
             st.subheader('Top Keywords about Trek1800c Weakness')
             df = pd.read_csv("csvfiles/kwTrek1800cwk.csv")
             st.dataframe(df)
-            
+
 if option == 'MadoneSL5_2':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -746,11 +745,11 @@ if option == 'MadoneSL5_2':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/MadoneSL5_2_Keyword_st.png")
             st.image(image, caption='MadoneSL5_2')
-            
+
             st.subheader('Top Keywords about MadoneSL5_2 Strength')
             df = pd.read_csv("csvfiles/kwMadoneSL5_2.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -765,11 +764,11 @@ if option == 'MadoneSL5_2':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/MadoneSL5_2_wordcloud_wk.png")
             st.image(image, caption='MadoneSL5_2')
-            
+
             st.subheader('Top Keywords about MadoneSL5_2 Weakness')
             df = pd.read_csv("csvfiles/kwMadoneSL5_2wk.csv")
-            st.dataframe(df)  
-        
+            st.dataframe(df)
+
 if option == 'Trek5200':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -786,11 +785,11 @@ if option == 'Trek5200':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek5200_Keyword_st.png")
             st.image(image, caption='Trek5200')
-                         
+
             st.subheader('Top Keywords about Trek5200 Strength')
             df = pd.read_csv("csvfiles/kwTrek5200.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -805,11 +804,11 @@ if option == 'Trek5200':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek5200_wordcloud_wk.png")
             st.image(image, caption='Trek5200')
-                         
+
             st.subheader('Top Keywords about Trek5200 Weakness')
             df = pd.read_csv("csvfiles/kwTrek5200wk.csv")
             st.dataframe(df)
-                         
+
 if option == 'Trek1200':
     option_sw = st.selectbox('Select feature',('Strength', 'Weakness'))
     if option_sw == 'Strength':
@@ -826,11 +825,11 @@ if option == 'Trek1200':
             st.subheader('Keyword Analysis YAKE')
             image = Image.open("pngfile/Trek1200_Keyword_st.png")
             st.image(image, caption='Trek1200')
-                         
+
             st.subheader('Top Keywords about Trek1200 Strength')
             df = pd.read_csv("csvfiles/kwTrek1200.csv")
             st.dataframe(df)
-            
+
     elif option_sw == 'Weakness':
         analysis = st.radio('Analysis',['Sentiment','Emotion', 'Keyword'])
         if analysis == "Sentiment":
@@ -848,7 +847,7 @@ if option == 'Trek1200':
             st.subheader('Top Keywords about Trek1200 Weakness')
             df = pd.read_csv("csvfiles/kwTrek1200wk.csv")
             st.dataframe(df)
-  
+
 # Setting up columns
 c1,c2 = st.columns([1,1])
 
@@ -859,22 +858,12 @@ if c1.checkbox("Show Dataframe strength"):
     df_strength = pd.read_csv("Dataframes/df_strength.csv")
     st.dataframe(data=df_strength)
     #st.table(data=df_strength)
-     
+
 elif c1.checkbox("Show Dataframe weakness"):
     st.subheader("This is weakness reviews dataset:")
     df_weakness = pd.read_csv("Dataframes/df_weakness.csv")
     st.dataframe(data=df_weakness)
-    #st.table(data=df_weakness)  
+    #st.table(data=df_weakness)
 
 link = '[To see the code in GitHub ](https://github.com/ozkayaalp/Analyzing-the-reviews-of-Trek-road-bikes-with-NLP-techniques)'
-c2.markdown(link, unsafe_allow_html=True)        
-
-    
-    
-    
-
-    
-
-
-
-
+c2.markdown(link, unsafe_allow_html=True)
