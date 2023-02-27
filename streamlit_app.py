@@ -39,7 +39,6 @@ def get_all_files_bike(filenames, bike_name_prefix):
     return [p for p in filenames if p.stem.startswith(bike_name_prefix)]
 
 # get all csv files based on option postfix st or wk
-@st.cache_resource
 def get_csv_file_by_option(csv_files_per_bike, option_sw):
     for csv_file in csv_files_per_bike:
         if option_sw == 'Weakness' and csv_file.stem.endswith('wk'):
@@ -49,7 +48,6 @@ def get_csv_file_by_option(csv_files_per_bike, option_sw):
     return None
 
 # get all png files based on analysis and option
-@st.cache_resource
 def get_png_file_by_analysis_and_option(png_files_per_bike, analysis, option_sw):
     for png_file in png_files_per_bike:
         if analysis == "Sentiment" and 'sent' in png_file.stem.lower():
@@ -77,7 +75,6 @@ png_filenames = get_png_filenames()
 option = st.selectbox(label='Select model', options=options.keys())
 png_files_per_bike = get_all_files_bike(png_filenames, bike_name_prefix=options.get(option))
 csv_files_per_bike = get_all_files_bike(csv_filenames, bike_name_prefix=f'kw{options.get(option)}')
-
 # st.write(png_files_per_bike)  # just for debugging
 # st.write(csv_files_per_bike)  # just for debugging
 
@@ -88,6 +85,7 @@ png_file = get_png_file_by_analysis_and_option(png_files_per_bike, analysis=anal
 if png_file is None:
     st.error(f'No matching image found for prefix: {options.get(option)}; analysis: {analysis}; feature: {option_sw}')
     st.stop()
+# st.info(png_file.stem)  # just for debugging
 image = load_bike_image(png_file)
 if analysis == "Sentiment":
     st.subheader('Sentiment Analysis NLTK Vader Lexicon')
